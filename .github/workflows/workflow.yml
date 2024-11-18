@@ -1,0 +1,14 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  call-workflow:
+    uses: Ysuika/sdv-reusable-workflow/.github/workflows/adas-swc-workflow.yml@main
+    with:
+      swc-name: swc-1
